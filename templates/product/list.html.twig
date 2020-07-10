@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Product name</th>
+                <th>Base Price</th>
+                <th>Final Price Sum</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in products %}
+                 <tr>
+                    <td>{{ product.name }}</td>
+                    <td>{{ product.BasePrice }}</td>
+                    <td>{{ product.FinalPricesSum }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Product Id</th>
+                <th>Base Price</th>
+                <th>Final Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for reservation in reservations %}
+                 <tr>
+                    <td>{{ reservation.Id }}</td>
+                    <td>{{ reservation.product }}</td>
+                    <td>{{ reservation.BasePrice }}</td>
+                    <td>{{ reservation.FinalPrice }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
